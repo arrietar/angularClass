@@ -6,8 +6,9 @@ import {Pregunta} from "../modelos/Pregunta";
 })
 export class DatosService {
 
-  preguntas: Pregunta[];
+  preguntas: Pregunta[] = [];
   constructor() {
+    /*
     this.preguntas=[
       {
         texto: "¿Cuál es tu nombre?",
@@ -25,8 +26,18 @@ export class DatosService {
         esconder: true
       },
     ];
+
+     */
   }
   obtenerPreguntas(): Pregunta[]{
     return this.preguntas;
+  }
+
+  borrarPregunta(pregunta:Pregunta){
+    for(let i = 0; i < this.preguntas.length; i++){
+      if(pregunta == this.preguntas[i]){
+        this.preguntas.splice(i, 1);
+      }
+    }
   }
 }

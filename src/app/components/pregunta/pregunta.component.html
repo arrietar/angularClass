@@ -1,13 +1,15 @@
 <div class="pregunta">
   <div class="card">
-    <div class="card header">
-      {{pregunta.texto}}
-      <a href="#" class="btn btn-link" (click)="pregunta.esconder = !pregunta.esconder">Mostrar</a>
+    <div class="card-header">
+      {{ pregunta.texto }}
+      <span class="buttons">
+        <a href="#" class="btn btn-link show-button" (click)="pregunta.esconder = !pregunta.esconder">Mostrar</a> |
+        <a href="#" class="btn btn-link delete-button" (click)="borrarPregunta()">Borrar</a>
+      </span>
     </div>
-    <div class="card block" [hidden]="pregunta.esconder">
-      <p class="card text">{{pregunta.respuesta}}</p>
+    <div class="card-block" [hidden]="pregunta.esconder">
+      <p class="card-text">{{ pregunta.respuesta }}</p>
     </div>
   </div>
   <br>
 </div>
-

@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Pregunta} from "../../modelos/Pregunta";
+import {DatosService} from "../../services/datos.service";
 
 @Component({
   selector: 'app-pregunta',
@@ -10,5 +11,12 @@ import {Pregunta} from "../../modelos/Pregunta";
 
 export class PreguntaComponent {
   @Input('pregunta') pregunta: Pregunta = {} as Pregunta;
+
+  constructor(public datosService:DatosService) {
+  }
+
+  borrarPregunta(){
+    this.datosService.borrarPregunta(this.pregunta);
+  }
 
 }
