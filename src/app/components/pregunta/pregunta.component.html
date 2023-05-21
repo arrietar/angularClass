@@ -1,0 +1,13 @@
+<div class="pregunta">
+  <div class="card">
+    <div class="card header">
+      {{pregunta.texto}}
+      <a href="#" class="btn btn-link" (click)="pregunta.esconder = !pregunta.esconder">Mostrar</a>
+    </div>
+    <div class="card block" [hidden]="pregunta.esconder">
+      <p class="card text">{{pregunta.respuesta}}</p>
+    </div>
+  </div>
+  <br>
+</div>
+

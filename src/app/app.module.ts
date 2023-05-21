@@ -5,16 +5,22 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListadoComponent } from './components/listado/listado.component';
 
+import {DatosService} from "./services/datos.service";
+import { PreguntaComponent } from './components/pregunta/pregunta.component';
+import { AgregarPreguntaComponent } from './components/agregar-pregunta/agregar-pregunta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListadoComponent
+    ListadoComponent,
+    PreguntaComponent,
+    AgregarPreguntaComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {DatosService} from "../../services/datos.service";
+import {Pregunta} from "../../modelos/Pregunta";
 
 @Component({
   selector: 'app-listado',
@@ -8,13 +9,13 @@ import { Component } from '@angular/core';
 })
 export class ListadoComponent {
 
+  preguntas: Pregunta[] = [];
 
-
-  constructor() {
+  constructor(public datosService: DatosService) {
 
   }
   ngOnInit(){
-
+    this.preguntas = this.datosService.obtenerPreguntas();
   }
 
 }

@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
-interface Pregunta {
-  texto: string;
-  respuesta: string;
-  esconder: boolean
-}
+import {Pregunta} from "../modelos/Pregunta";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,5 +25,8 @@ export class DatosService {
         esconder: true
       },
     ];
+  }
+  obtenerPreguntas(): Pregunta[]{
+    return this.preguntas;
   }
 }
