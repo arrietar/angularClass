@@ -1,1 +1,18 @@
-<p>agregar-pregunta works!</p>
+<div class="card">
+  <div class="card-header">
+    Agregar una nueva pregunta
+  </div>
+  <div class="card-block">
+    <form (submit)="agregarPregunta($event)">
+      <div class="form-group">
+        <label for="pregunta">Texto de pregunta</label>
+        <input type="text" class="form-control" [(ngModel)]="pregunta" name="pregunta" id="pregunta">
+      </div>
+      <div class="form-group">
+        <label for="respuesta">Texto de respuesta</label>
+        <input type="text" class="form-control" [(ngModel)]="respuesta" name="respuesta" id="respuesta">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Enviar">
+    </form>
+  </div>
+</div>

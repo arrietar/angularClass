@@ -18,4 +18,8 @@ export class ListadoComponent {
     this.preguntas = this.datosService.obtenerPreguntas();
   }
 
+  agregarPregunta(pregunta: Pregunta) {
+    this.preguntas.push(pregunta); // Agrega la nueva pregunta al arreglo preguntas
+  }
+
 }
